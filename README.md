@@ -4,6 +4,9 @@
 </p>
 
 <!-- Título e Subtítulo -->
+<p align="center">
+  <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="5%">
+</p>
 <h1 align="center">ALM – Luxury Design System</h1>
 <p align="center">
   <strong>Laboratório de Palavras | Ideias em Texto</strong><br>
