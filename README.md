@@ -1,58 +1,44 @@
-﻿ALM – LUXURY DESIGN SYSTEM
 
-Laboratório de Palavras | Ideias em Texto
-Estúdio Digital de Comunicação e Escrita Profissional
-
-Alma · limpa · profissional · forte
+> O código completo do tema está disponível no site publicado. Este repositório é o contentor de governance e documentação.
 
 ---
 
-## Visão
+## Como Utilizar
 
-O **ALM – Luxury Design System** é a identidade visual e estrutural do Laboratório de Palavras. Um ecossistema editorial digital desenhado para transmitir elegância silenciosa, rigor técnico e clareza absoluta.
+### 1. Visualizar o tema
 
-**Tema oficial:** [https://textxto.github.io/alm/](https://textxto.github.io/alm/)
+Aceda diretamente ao site publicado: [https://textxto.github.io/alm/](https://textxto.github.io/alm/)
 
----
+### 2. Integrar num projeto próprio
 
-## Características
+O ALM foi construído sobre UIkit 3.21.13 e utiliza Google Fonts (Inter, Cormorant). Para integrar:
 
-| Característica | Abordagem ALM |
-| :--- | :--- |
-| Paleta | Azul Profundo, Ouro Sofisticado, Cinzas Elegantes |
-| Tipografia | Inter (corpo), Cormorant (títulos) |
-| UX | Scroll horizontal, barra de progresso, modo foco |
-| Micro-interações | Ripple effects, transições cinemáticas |
-| Tema dinâmico | Claro/escuro automático e manual |
+1. Inclua os ficheiros CSS e JS do UIkit no seu projeto.
+2. Aplique as variáveis CSS do sistema (consulte `PALETA.md` e `DESIGN_SYSTEM.md`).
+3. Estruture o HTML seguindo as classes e componentes documentados.
 
----
-
-## Estrutura do repositório
-
- + "`" + 
-alm/
-├── .github/               # Templates de issues e workflows CI
-├── docs/                  # Documentação completa
-│   ├── BRAND_BOOK.md
-│   ├── COMPONENTES.md
-│   ├── DESIGN_SYSTEM.md
-│   ├── ESTRUTURA.md
-│   ├── GUIA_DE_ESTILO.md
-│   └── PALETA.md
-├── src/                   # Código fonte do tema
-├── .gitignore
-├── LICENSE
-├── README.md
-└── ROADMAP.md
- + "`" + 
+> O tema é fornecido como referência de design. A reprodução não autorizada para fins comerciais está sujeita à licença MIT e aos direitos de marca do Laboratório de Palavras.
 
 ---
 
 ## Deploy via GitHub Pages
 
-1. Criar branch gh-pages
-2. Enviar src/ para essa branch
-3. Ativar GitHub Pages apontando para gh-pages
+1. Crie uma branch `gh-pages` no seu repositório.
+2. Envie o conteúdo da pasta `src/` para essa branch.
+3. Ative o GitHub Pages nas definições do repositório, apontando para a branch `gh-pages`.
+4. O tema estará disponível em `https://<seu-usuario>.github.io/<seu-repositorio>/`.
+
+---
+
+## Contribuição
+
+Contribuições são bem-vindas. Consulte os templates de issues em `.github/ISSUE_TEMPLATE/` para reportar bugs, sugerir funcionalidades ou melhorias na documentação.
+
+### Diretrizes
+
+- Utilize português europeu em toda a comunicação.
+- Respeite a identidade visual ALM (zero emojis, SVGs inline).
+- Documente qualquer alteração nos ficheiros `docs/` correspondentes.
 
 ---
 
@@ -60,8 +46,24 @@ alm/
 
 MIT © Laboratório de Palavras | Ideias em Texto
 
+Consulte o ficheiro [`LICENSE`](LICENSE) para mais informações.
+
+---
+
+## Contacto
+
+- **Email:** hello@laboratoriopalavras.estudio
+- **Site oficial:** [https://textxto.github.io/alm/](https://textxto.github.io/alm/)
+- **Repositório:** [https://github.com/textxto/alm](https://github.com/textxto/alm)
+
 ---
 
 <div align="center">
   <sub>© 2026 Laboratório de Palavras — Alma · limpa · profissional · forte</sub>
 </div>
+
+---
+
+<p align="center">
+  <a href="#alm--luxury-design-system">⬆️ Voltar ao topo</a>
+</p>
