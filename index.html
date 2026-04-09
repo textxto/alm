@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Laboratório de Palavras | Estúdio Digital de Comunicação e Escrita Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M32.2061 6.02637C34.9032 3.3289 39.2762 3.3283 41.9736 6.02539C44.6707 8.72249 44.6714 13.0956 41.9746 15.793L39.7686 17.999L38.001 19.7676L17.8057 39.9639C17.0434 40.7262 16.0904 41.2701 15.0459 41.5371L5.55957 43.9619C5.13184 44.0712 4.67834 43.946 4.36621 43.6338C4.05409 43.3216 3.92963 42.8681 4.03906 42.4404L6.46582 32.9551C6.73289 31.9116 7.27554 30.959 8.03711 30.1973L28.2334 9.99902L32.2061 6.02637Z' fill='url(%23g1)'/%3E%3Cpath d='M5.37305 5.375C6.76444 3.98394 8.68063 3.78932 10.5898 4.16992C12.4956 4.54995 14.6257 5.53748 16.7988 6.85254C21.1619 9.49294 26.0275 13.6564 30.1846 17.8135C34.3417 21.9706 38.5055 26.8346 41.1455 31.1973C42.4604 33.3701 43.4479 35.5004 43.8281 37.4062C44.2089 39.3157 44.0129 41.2326 42.623 42.625C41.2325 44.0178 39.3165 44.2135 37.4072 43.833C35.5014 43.4531 33.3707 42.4658 31.1973 41.1504C29.3426 40.0279 27.3971 38.63 25.4538 37.0744C24.8781 36.6136 24.8389 35.7558 25.3604 35.2343C25.8167 34.778 26.5443 34.7442 27.0483 35.1472C28.9063 36.6333 30.7504 37.9581 32.4912 39.0117C34.5605 40.2641 36.4027 41.0833 37.8955 41.3809C39.3846 41.6776 40.2936 41.4204 40.8545 40.8584C41.416 40.2957 41.673 39.3849 41.376 37.8955C41.0781 36.4021 40.2578 34.56 39.0059 32.4912C36.512 28.3702 32.5035 23.6676 28.417 19.5811C24.3305 15.4946 19.6273 11.4855 15.5059 8.99121C13.4369 7.73911 11.5946 6.91886 10.1016 6.62109C8.61225 6.32415 7.70235 6.58183 7.14062 7.14355C6.57896 7.70528 6.32124 8.61525 6.61816 10.1045C6.91593 11.5975 7.73633 13.439 8.98828 15.5078C10.0417 17.2485 11.3661 19.0928 12.8518 20.9507C13.2549 21.4547 13.221 22.1823 12.7648 22.6386C12.2433 23.16 11.3855 23.1209 10.9247 22.5451C9.36944 20.6018 7.97196 18.6564 6.84961 16.8018C5.53455 14.6286 4.54702 12.4985 4.16699 10.5928C3.78632 8.68333 3.98159 6.76646 5.37305 5.375Z' fill='url(%23g2)'/%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='35' y1='5' x2='-17' y2='38'%3E%3Cstop stop-color='%23FFC470'/%3E%3Cstop offset='0.22' stop-color='%23FF835C'/%3E%3Cstop offset='0.49' stop-color='%23F24A9D'/%3E%3Cstop offset='0.77' stop-color='%23B339F0'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='9' y1='35' x2='48' y2='-8'%3E%3Cstop offset='0.21' stop-color='%234E46E2' stop-opacity='0.8'/%3E%3Cstop offset='0.36' stop-color='%23625DF6'/%3E%3Cstop offset='0.64' stop-color='%23E37DFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+    
+    <style>
+        /* ------------------------------------------------------------
+           PURE UI/UX - LUXURY DESIGN SYSTEM - LABORATÓRIO DE PALAVRAS EDITION
+           Paleta: Azul Profundo, Ouro Sofisticado, Cinzas Elegantes
+           Refinado para Pure UI/UX: zero ruído, fluidez absoluta
+        ------------------------------------------------------------ */
+        :root {
+            --navy-deep: #0A1A2F;
+            --blue-corporate: #0055A4;
+            --blue-luxury: #1A6BB5;
+            --gold-premium: #C6A43F;
+            --gold-light: #E8D5A3;
+            --gold-shimmer: rgba(198, 164, 63, 0.2);
+            --charcoal: #1E1E24;
+            --gray-luxury: #2C2C36;
+            --gray-mist: #6B7280;
+            --cream: #F9F7F2;
+            --white-pure: #FFFFFF;
+            --black-elegant: #0F0F12;
+            
+            --bg-primary: var(--cream);
+            --bg-secondary: #F5F3EF;
+            --bg-card: rgba(255, 255, 255, 0.96);
+            --bg-card-solid: var(--white-pure);
+            --text-primary: var(--charcoal);
+            --text-secondary: var(--gray-mist);
+            --text-muted: #9CA3AF;
+            --accent-primary: var(--blue-corporate);
+            --accent-secondary: var(--gold-premium);
+            --accent-tertiary: var(--blue-luxury);
+            --accent-glow: rgba(0, 85, 164, 0.08);
+            --accent-light: rgba(0, 85, 164, 0.04);
+            --border-color: rgba(0, 0, 0, 0.06);
+            --border-light: rgba(0, 0, 0, 0.03);
+            --btn-border: var(--blue-corporate);
+            --btn-hover-bg: var(--blue-corporate);
+            --btn-hover-color: var(--white-pure);
+            --dot-bg: #D4D0C8;
+            --dot-active: var(--gold-premium);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.12);
+            --shadow-glow: 0 0 40px rgba(0, 85, 164, 0.06);
+            --shadow-gold: 0 0 30px rgba(198, 164, 63, 0.15);
+            --menu-bg: rgba(255, 255, 255, 0.96);
+            --gradient-bg: radial-gradient(circle at 30% 20%, rgba(0,85,164,0.02) 0%, transparent 70%);
+            --gradient-gold: linear-gradient(135deg, var(--gold-premium) 0%, var(--gold-light) 100%);
+            --gradient-blue: linear-gradient(135deg, var(--blue-corporate) 0%, var(--blue-luxury) 100%);
+            --transition-smooth: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            --transition-bounce: all 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+        }
+
+        body.dark {
+            --bg-primary: var(--black-elegant);
+            --bg-secondary: #14161C;
+            --bg-card: rgba(20, 22, 28, 0.96);
+            --bg-card-solid: #14161C;
+            --text-primary: #EDEDF0;
+            --text-secondary: #A0A4B8;
+            --text-muted: #6E7280;
+            --accent-primary: var(--blue-luxury);
+            --accent-secondary: var(--gold-light);
+            --accent-tertiary: var(--blue-corporate);
+            --accent-glow: rgba(26, 107, 181, 0.12);
+            --accent-light: rgba(26, 107, 181, 0.06);
+            --border-color: rgba(255, 255, 255, 0.06);
+            --border-light: rgba(255, 255, 255, 0.03);
+            --btn-border: var(--gold-light);
+            --btn-hover-bg: var(--gold-premium);
+            --btn-hover-color: var(--black-elegant);
+            --dot-bg: #2A2E36;
+            --dot-active: var(--gold-light);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 40px rgba(26, 107, 181, 0.12);
+            --shadow-gold: 0 0 30px rgba(198, 164, 63, 0.2);
+            --menu-bg: rgba(15, 15, 18, 0.96);
+            --gradient-bg: radial-gradient(circle at 30% 20%, rgba(26,107,181,0.04) 0%, transparent 70%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            background-size: 200% 200%;
+            animation: gradientShift 20s ease infinite;
+            color: var(--text-primary);
+            transition: background 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
+            font-feature-settings: "calt", "ss02", "kern";
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            max-width: 100vw;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-bg);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .preloader.hide { opacity: 0; visibility: hidden; }
+        .preloader-content { text-align: center; }
+        .preloader-logo { 
+            font-size: clamp(1.5rem, 5vw, 2rem); 
+            font-weight: 700; 
+            letter-spacing: -0.02em; 
+            margin-bottom: 1.2rem;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: logoBreathing 2s ease-in-out infinite;
+        }
+        @keyframes logoBreathing {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+        .preloader-spinner { 
+            width: 40px; 
+            height: 40px; 
+            border: 2px solid var(--accent-light); 
+            border-top: 2px solid var(--accent-secondary); 
+            border-radius: 50%; 
+            animation: spin 0.8s linear infinite; 
+            margin: 0 auto; 
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            height: 100dvh;
+            width: 100%;
+            scrollbar-width: none;
+            max-width: 100vw;
+            position: relative;
+            z-index: 1;
+        }
+        .horizontal-scroll::-webkit-scrollbar { display: none; }
+
+        .slide-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(198, 164, 63, 0.2);
+            z-index: 1002;
+        }
+        .slide-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            width: 0%;
+            transition: width 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .slide-dots {
+            position: fixed;
+            bottom: clamp(0.8rem, 2vh, 1.2rem);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: clamp(0.4rem, 2vw, 0.6rem);
+            z-index: 1000;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            border: 1px solid var(--border-light);
+            pointer-events: auto;
+        }
+        @supports not (backdrop-filter: blur(12px)) {
+            .slide-dots { background: var(--bg-card-solid); }
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            cursor: pointer;
+        }
+        .dot.active {
+            width: 24px;
+            background: var(--accent-secondary);
+            border-radius: 4px;
+        }
+        .dot:hover {
+            background: var(--accent-secondary);
+            transform: scale(1.2);
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: transparent;
+            transition: background 0.4s ease;
+            min-height: 100dvh;
+            height: auto;
+            display: flex;
+            align-items: center;
+            animation: cinematicReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        @keyframes cinematicReveal {
+            0% { opacity: 0; transform: scale(0.98) translateY(20px); filter: blur(4px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            padding: clamp(1.5rem, 5vh, 3rem) clamp(1rem, 4vw, 2rem);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding-left: clamp(2rem, 6vw, 4.5rem);
+                padding-right: clamp(2rem, 6vw, 4.5rem);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: clamp(3rem, 8vw, 5rem);
+                padding-right: clamp(3rem, 8vw, 5rem);
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .container {
+                max-width: 1800px;
+                padding: clamp(2rem, 4vh, 4rem) clamp(3rem, 8vw, 8rem);
+            }
+        }
+
+        .slide-capa .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .capa-content {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid var(--accent-secondary);
+            white-space: nowrap;
+            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent-secondary); }
+        }
+
+        .grid-editorial {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(1.5rem, 5vh, 3rem);
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .grid-editorial {
+                grid-template-columns: minmax(0, 58%) minmax(0, 38%);
+                gap: 4%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .grid-editorial {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .col-svg {
+                order: -1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .col-svg svg {
+                max-width: min(180px, 25vw);
+            }
+        }
+
+        .col-texto {
+            min-width: 0;
+            word-wrap: break-word;
+        }
+
+        .col-svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-svg svg {
+            width: 100%;
+            max-width: min(220px, 30vw);
+            height: auto;
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        .col-svg:hover svg {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: clamp(0.8rem, 3vh, 1.5rem);
+            letter-spacing: -0.02em;
+        }
+        h1 .highlight { 
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            font-weight: 600;
+            margin-bottom: clamp(1rem, 4vh, 1.8rem);
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: clamp(40px, 8vw, 60px);
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 3px;
+        }
+        h3 {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem 0;
+            color: var(--accent-tertiary);
+        }
+        .hero-subtitle {
+            font-size: clamp(0.6rem, 2vw, 0.75rem);
+            text-transform: uppercase;
+            letter-spacing: clamp(4px, 1.5vw, 10px);
+            color: var(--accent-secondary);
+            margin-bottom: clamp(0.8rem, 3vh, 1.2rem);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 480px) {
+            .hero-subtitle {
+                letter-spacing: 3px;
+            }
+        }
+        
+        .text-body {
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            line-height: 1.55;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .info-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent-light);
+            padding: clamp(0.25rem, 1vh, 0.4rem) clamp(0.8rem, 2vw, 1.2rem);
+            border-radius: 50px;
+            font-size: clamp(0.6rem, 1.8vw, 0.7rem);
+            font-weight: 600;
+            color: var(--accent-primary);
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0,85,164,0.1);
+            cursor: default;
+        }
+        @supports not (backdrop-filter: blur(4px)) {
+            .info-badge { background: var(--bg-card-solid); }
+        }
+        .info-badge svg {
+            transition: transform 0.3s ease;
+        }
+        .info-badge:hover {
+            transform: translateY(-3px);
+            background: var(--gradient-blue);
+            color: white;
+            border-color: transparent;
+            box-shadow: var(--shadow-gold);
+        }
+        .info-badge:hover svg {
+            transform: rotate(5deg) scale(1.05);
+        }
+        
+        .card-note {
+            background: var(--bg-card-solid);
+            border-left: 4px solid var(--accent-secondary);
+            padding: clamp(0.8rem, 2vh, 1.1rem) clamp(1rem, 3vw, 1.5rem);
+            border-radius: 16px;
+            margin: clamp(0.8rem, 2vh, 1.2rem) 0;
+            box-shadow: var(--shadow-sm);
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            transition: var(--transition-smooth);
+        }
+        .card-note:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--accent-primary);
+        }
+        
+        .list-icon {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+        .list-icon li {
+            padding: clamp(0.4rem, 1.5vh, 0.6rem) 0;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+            transition: var(--transition-smooth);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .list-icon li:last-child { border-bottom: none; }
+        .list-icon li svg {
+            width: clamp(16px, 4vw, 20px);
+            height: clamp(16px, 4vw, 20px);
+            stroke: var(--accent-secondary);
+            stroke-width: 1.5;
+            fill: none;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+        .list-icon li:hover {
+            transform: translateX(5px);
+        }
+        .list-icon li:hover svg {
+            stroke: var(--accent-secondary);
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 2px var(--accent-secondary));
+        }
+        
+        /* ============================================ */
+        /* BARRA LATERAL ESQUERDA - TRANSPARENTE        */
+        /* SCROLLBAR INVISÍVEL - PURE UX               */
+        /* ============================================ */
+        
+        .side-nav {
+            position: fixed;
+            left: clamp(0.5rem, 2vw, 1.5rem);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1001;
+            background: transparent;
+            backdrop-filter: blur(16px);
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-md);
+            padding: 0.6rem 0.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 80vh;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .side-nav::-webkit-scrollbar {
+            display: none;
+        }
+        
+        @supports not (backdrop-filter: blur(16px)) {
+            .side-nav { background: var(--bg-card-solid); }
+        }
+        
+        body.dark .side-nav {
+            background: transparent;
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .side-nav a {
+            width: clamp(1.8rem, 5vw, 2.2rem);
+            height: clamp(1.8rem, 5vw, 2.2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-bounce);
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .side-nav a::before {
+            content: attr(title);
+            position: absolute;
+            left: 110%;
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            transform: translateX(-8px);
+            z-index: 1002;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-gold);
+        }
+        .side-nav a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .side-nav a svg {
+            width: 0.9rem;
+            height: 0.9rem;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+            display: block;
+            margin: 0 auto;
+            transition: var(--transition-smooth);
+        }
+        
+        .side-nav a:hover, 
+        .side-nav a.active {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            transform: scale(1.1);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        @media (min-width: 769px) {
+            .side-nav a {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
+            .side-nav a svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .side-nav {
+                max-height: 3.5rem;
+                overflow-y: auto;
+                transition: max-height 0.3s ease;
+                top: 30%;
+                transform: translateY(-30%);
+                background: transparent;
+                border-color: rgba(255, 255, 255, 0.25);
+            }
+            
+            body.dark .side-nav {
+                background: transparent;
+                border-color: rgba(255, 255, 255, 0.15);
+            }
+            
+            .side-nav:hover,
+            .side-nav:focus-within {
+                max-height: 60vh;
+            }
+            
+            .side-nav a {
+                width: 2.2rem;
+                height: 2.2rem;
+            }
+            
+            .side-nav a svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        
+        /* ============================================ */
+        /* BARRA LATERAL DIREITA PRINCIPAL - PURE UX    */
+        /* ============================================ */
+        
+        .right-actions-nav {
+            position: fixed;
+            right: clamp(0.5rem, 2vw, 1.5rem);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1001;
+            background: var(--menu-bg);
+            backdrop-filter: blur(20px);
+            padding: clamp(0.5rem, 2vh, 1rem) clamp(0.3rem, 1vw, 0.6rem);
+            border-radius: 70px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: clamp(0.4rem, 1.5vh, 0.7rem);
+            box-shadow: var(--shadow-md);
+        }
+        
+        @supports not (backdrop-filter: blur(20px)) {
+            .right-actions-nav { background: var(--bg-card-solid); }
+        }
+        
+        .right-actions-nav button {
+            width: clamp(1.6rem, 5vw, 2.2rem);
+            height: clamp(1.6rem, 5vw, 2.2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text-muted);
+            transition: var(--transition-bounce);
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            position: relative;
+        }
+        
+        .right-actions-nav button::before {
+            content: attr(title);
+            position: absolute;
+            right: 110%;
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            transform: translateX(8px);
+            z-index: 1002;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-gold);
+        }
+        .right-actions-nav button:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .right-actions-nav button svg {
+            width: 1rem;
+            height: 1rem;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .right-actions-nav button:hover {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            transform: scale(1.1);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        /* ============================================ */
+        /* BARRA INFERIOR (footer + redes sociais)      */
+        /* ============================================ */
+        
+        .bottom-bar {
+            position: fixed;
+            bottom: clamp(0.5rem, 1.5vh, 1rem);
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 clamp(1rem, 4vw, 2rem);
+            pointer-events: none;
+        }
+        
+        .footer-bottom {
+            position: relative;
+            pointer-events: auto;
+            margin: 0 auto;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            padding: clamp(0.2rem, 1vh, 0.3rem) clamp(0.8rem, 3vw, 1.5rem);
+            border-radius: 40px;
+            border: 1px solid var(--border-light);
+            font-size: clamp(0.55rem, 1.8vw, 0.65rem);
+            color: var(--text-muted);
+            letter-spacing: 0.8px;
+            white-space: nowrap;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        @supports not (backdrop-filter: blur(12px)) {
+            .footer-bottom { background: var(--bg-card-solid); }
+        }
+        .footer-bottom:hover {
+            background: var(--bg-card-solid);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .social-icons-horizontal {
+            display: flex;
+            gap: 0.6rem;
+            pointer-events: auto;
+            position: absolute;
+            right: clamp(1rem, 4vw, 2rem);
+        }
+        
+        .social-icons-horizontal a {
+            width: clamp(32px, 8vw, 40px);
+            height: clamp(32px, 8vw, 40px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--text-muted);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-light);
+            transition: var(--transition-bounce);
+            position: relative;
+        }
+        
+        @supports not (backdrop-filter: blur(12px)) {
+            .social-icons-horizontal a { background: var(--bg-card-solid); }
+        }
+        
+        .social-icons-horizontal a::before {
+            content: attr(title);
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 1002;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-gold);
+        }
+        .social-icons-horizontal a:hover::before {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-4px);
+        }
+        
+        .social-icons-horizontal a svg {
+            width: clamp(0.9rem, 3vw, 1rem);
+            height: clamp(0.9rem, 3vw, 1rem);
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .social-icons-horizontal a:hover {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .bottom-bar {
+                flex-direction: column-reverse;
+                gap: 0.6rem;
+                align-items: center;
+                justify-content: center;
+            }
+            .social-icons-horizontal {
+                position: relative;
+                right: auto;
+                justify-content: center;
+            }
+            .footer-bottom {
+                white-space: normal;
+                text-align: center;
+                max-width: 90%;
+                margin: 0;
+            }
+        }
+        
+        body.dark .social-icons-horizontal a:hover {
+            color: var(--black-elegant);
+        }
+
+        .btn-read-article {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--accent-secondary);
+            background: transparent;
+            color: var(--accent-secondary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            border-radius: 40px;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-read-article svg {
+            transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        .btn-read-article:hover {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+            border-color: transparent;
+        }
+        
+        .btn-read-article:hover svg {
+            transform: translateX(4px);
+        }
+        
+        .btn-read-article:focus-visible {
+            outline: 2px solid var(--accent-secondary);
+            outline-offset: 2px;
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(0);
+            animation: ripple-animation 0.5s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .accordion-premium { margin-top: 1.5rem; width: 100%; }
+        .accordion-item { border-bottom: 1px solid var(--border-color); }
+        .accordion-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            text-align: left;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .accordion-header:hover { color: var(--accent-primary); }
+        .accordion-icon { width: 28px; height: 28px; flex-shrink: 0; }
+        .accordion-icon svg { 
+            stroke: var(--accent-tertiary); 
+            stroke-width: 1.2; 
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+        .accordion-header:hover .accordion-icon svg {
+            stroke: var(--accent-secondary);
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 2px var(--accent-secondary));
+        }
+        .accordion-title { flex: 1; font-weight: 600; }
+        .accordion-indicator { width: 20px; height: 20px; transition: transform 0.4s ease; }
+        .accordion-indicator svg { 
+            stroke: var(--accent-secondary); 
+            stroke-width: 1.5; 
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+        .accordion-header:hover .accordion-indicator svg {
+            stroke: var(--accent-primary);
+        }
+        .accordion-header[aria-expanded="true"] .accordion-indicator { transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
+        .accordion-content .accordion-inner { padding: 0 0 1.2rem clamp(1rem, 4vw, 2.5rem); }
+
+        .uk-modal-container .uk-modal-dialog {
+            border-radius: 20px;
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            animation: modalReveal 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        @keyframes modalReveal {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .uk-modal-body {
+            padding: 2rem;
+        }
+        .uk-article-title {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .uk-article-meta {
+            font-size: 0.8rem;
+            color: var(--accent-secondary);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 1rem;
+        }
+        .uk-text-lead {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            line-height: 1.5;
+            color: var(--accent-tertiary);
+            margin-bottom: 1.2rem;
+        }
+        .uk-button-text {
+            color: var(--accent-secondary);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+        .uk-button-text:hover { color: var(--accent-primary); transform: translateX(4px); }
+
+        hr { margin: 1.5rem auto; border: none; height: 1px; width: 80px; background: linear-gradient(90deg, transparent, var(--accent-secondary), var(--accent-primary), transparent); }
+        
+        .uk-modal-close-default svg,
+        .uk-offcanvas-close svg,
+        .quiz-close-btn svg {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .uk-modal-close-default:hover svg,
+        .uk-offcanvas-close:hover svg,
+        .quiz-close-btn:hover svg {
+            transform: rotate(90deg);
+            color: var(--accent-secondary);
+        }
+        
+        /* ============================================ */
+        /* QUESTIONÁRIO FULLSCREEN - PURE UI/UX         */
+        /* ============================================ */
+        .quiz-modal-full {
+            --quiz-bg-overlay: rgba(10, 26, 47, 0.96);
+            --quiz-card-bg: #F9F7F2;
+            --quiz-text-primary: #1E1E24;
+            --quiz-text-secondary: #6B7280;
+            --quiz-text-muted: #9CA3AF;
+            --quiz-accent-blue: #0055A4;
+            --quiz-accent-blue-hover: #004080;
+            --quiz-accent-gold: #C6A43F;
+            --quiz-accent-gold-light: #E8D5A3;
+            --quiz-border: rgba(0, 0, 0, 0.08);
+            --quiz-border-light: rgba(0, 0, 0, 0.04);
+            --quiz-input-bg: #FFFFFF;
+            --quiz-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark .quiz-modal-full {
+            --quiz-card-bg: #14161C;
+            --quiz-text-primary: #EDEDF0;
+            --quiz-text-secondary: #A0A4B8;
+            --quiz-text-muted: #6E7280;
+            --quiz-border: rgba(255, 255, 255, 0.08);
+            --quiz-border-light: rgba(255, 255, 255, 0.04);
+            --quiz-input-bg: #1E1E28;
+            --quiz-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .quiz-modal-full .uk-modal-dialog {
+            background: rgba(10, 26, 47, 0.98);
+            backdrop-filter: blur(16px);
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 2rem;
+        }
+        @supports not (backdrop-filter: blur(16px)) {
+            .quiz-modal-full .uk-modal-dialog { background: var(--navy-deep); }
+        }
+
+        .quiz-modal-container {
+            max-width: 680px;
+            width: 100%;
+            background: var(--quiz-card-bg);
+            border-radius: 28px;
+            padding: clamp(1.5rem, 5vw, 2.5rem);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(198, 164, 63, 0.1);
+            animation: quizFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        @keyframes quizFadeIn {
+            from { opacity: 0; transform: scale(0.96) translateY(20px); filter: blur(4px); }
+            to { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+        }
+
+        .quiz-close-btn {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition-bounce);
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            cursor: pointer;
+            border: none;
+        }
+        .quiz-close-btn:hover {
+            background: var(--quiz-accent-gold);
+            transform: scale(1.05);
+            color: var(--quiz-text-primary);
+        }
+
+        .quiz-svg-wrapper {
+            margin-bottom: 1.8rem;
+            text-align: center;
+        }
+
+        .quiz-svg-wrapper svg {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        }
+
+        .quiz-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--quiz-accent-gold);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .quiz-title {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--quiz-text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-title-accent {
+            background: linear-gradient(135deg, var(--quiz-accent-blue) 0%, #1A6BB5 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .quiz-divider {
+            width: 65px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--quiz-accent-gold), transparent);
+            margin: 1rem 0 0.8rem 0;
+        }
+
+        .quiz-description {
+            font-size: 0.9rem;
+            color: var(--quiz-text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .quiz-progress-container {
+            margin-bottom: 1.5rem;
+        }
+        .quiz-progress-bar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--quiz-accent-gold), var(--quiz-accent-blue));
+            border-radius: 3px;
+            transition: width 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .quiz-progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--quiz-text-muted);
+        }
+
+        .quiz-question {
+            font-size: clamp(1rem, 3.5vw, 1.15rem);
+            font-weight: 600;
+            color: var(--quiz-text-primary);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--quiz-border);
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-opt-btn {
+            background: transparent;
+            border: 1px solid var(--quiz-border);
+            border-radius: 60px;
+            padding: 0.8rem 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--quiz-text-primary);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-opt-btn:hover {
+            border-color: var(--quiz-accent-gold);
+            background: var(--quiz-accent-gold);
+            color: var(--quiz-card-bg);
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(198, 164, 63, 0.25);
+        }
+
+        .quiz-opt-btn.selected {
+            background: var(--quiz-accent-gold);
+            color: var(--quiz-card-bg);
+            border-color: var(--quiz-accent-gold);
+        }
+        
+        .quiz-opt-btn.selected::after {
+            content: '✓';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            font-weight: bold;
+            animation: checkPop 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        @keyframes checkPop {
+            0% { opacity: 0; transform: translateY(-50%) scale(0.5); }
+            80% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+            100% { opacity: 1; transform: translateY(-50%) scale(1); }
+        }
+
+        .quiz-email-group {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--quiz-border);
+        }
+
+        .quiz-email-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--quiz-text-secondary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .quiz-email-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            background: var(--quiz-input-bg);
+            border: 1px solid var(--quiz-border);
+            border-radius: 60px;
+            font-size: 0.95rem;
+            color: var(--quiz-text-primary);
+            transition: var(--transition-smooth);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .quiz-email-input:focus {
+            outline: none;
+            border-color: var(--quiz-accent-gold);
+            box-shadow: 0 0 0 4px rgba(198, 164, 63, 0.15);
+        }
+
+        .quiz-email-input::placeholder {
+            color: var(--quiz-text-muted);
+            opacity: 0.6;
+        }
+
+        .quiz-nav {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .quiz-nav-btn {
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            background: transparent;
+            border: 1px solid var(--quiz-border);
+            color: var(--quiz-text-primary);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-nav-btn:hover:not(:disabled) {
+            border-color: var(--quiz-accent-blue);
+            color: var(--quiz-accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .quiz-nav-primary {
+            background: var(--quiz-accent-blue);
+            border-color: var(--quiz-accent-blue);
+            color: white;
+            transition: var(--transition-bounce);
+        }
+
+        .quiz-nav-primary:hover:not(:disabled) {
+            background: var(--quiz-accent-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 85, 164, 0.3);
+        }
+
+        .quiz-nav-primary.ready-to-submit {
+            animation: subtlePulse 1.5s infinite;
+        }
+
+        @keyframes subtlePulse {
+            0% { box-shadow: 0 0 0 0 rgba(198, 164, 63, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(198, 164, 63, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(198, 164, 63, 0); }
+        }
+
+        .quiz-nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active-step {
+            display: block;
+            animation: quizStepTransition 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        @keyframes quizStepTransition {
+            from { opacity: 0; transform: translateY(15px); filter: blur(2px); }
+            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .quiz-success {
+            background: var(--quiz-accent-blue);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 60px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            animation: quizFadeIn 0.4s ease;
+        }
+
+        .quiz-success svg {
+            stroke: white;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 640px) {
+            .quiz-modal-container {
+                padding: 1.5rem;
+                margin: 0 1rem;
+            }
+            .quiz-opt-btn {
+                padding: 0.7rem 1rem;
+                font-size: 0.85rem;
+            }
+            .quiz-nav {
+                flex-wrap: wrap;
+            }
+            .quiz-nav-btn {
+                flex: 1;
+                text-align: center;
+                padding: 0.6rem 1rem;
+            }
+            .quiz-email-input {
+                padding: 0.75rem 1rem;
+            }
+            .quiz-svg-wrapper svg {
+                max-width: 320px;
+            }
+        }
+
+        .quiz-info-tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        
+        .quiz-info-tooltip svg {
+            stroke: var(--quiz-accent-gold);
+            transition: var(--transition-smooth);
+        }
+        
+        .quiz-info-tooltip:hover svg {
+            transform: scale(1.1);
+        }
+        
+        @keyframes confettoFall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(300px) rotate(360deg); opacity: 0; }
+        }
+        
+        .illustration-capa svg {
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        
+        .illustration-capa:hover svg {
+            transform: translateY(-5px);
+        }
+        
+        body.focus-mode .side-nav,
+        body.focus-mode .right-actions-nav,
+        body.focus-mode .bottom-bar,
+        body.focus-mode .slide-dots {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .focus-toggle-btn {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            z-index: 1002;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-light);
+            border-radius: 40px;
+            padding: 0.4rem 1rem;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            font-family: 'Inter', sans-serif;
+        }
+        @supports not (backdrop-filter: blur(12px)) {
+            .focus-toggle-btn { background: var(--bg-card-solid); }
+        }
+        .focus-toggle-btn:hover {
+            background: var(--gradient-gold);
+            color: var(--charcoal);
+            transform: translateY(-2px);
+        }
+        .focus-toggle-btn:focus-visible {
+            outline: 2px solid var(--accent-secondary);
+            outline-offset: 2px;
+        }
+
+        /* Pure UX - focus visible para todos os elementos interativos */
+        button:focus-visible,
+        a:focus-visible,
+        .quiz-opt-btn:focus-visible,
+        .accordion-header:focus-visible {
+            outline: 2px solid var(--accent-secondary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <div class="preloader-logo">Laboratório de Palavras</div>
+        <div class="preloader-spinner"></div>
+    </div>
+</div>
+
+<div class="slide-progress">
+    <div class="slide-progress-bar" id="slideProgressBar"></div>
+</div>
+
+<nav class="side-nav" aria-label="Navegação por slides">
+    <a href="#" data-slide="0" title="Início" aria-label="Ir para o slide Início"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5L12 3L21 9.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 22 9 16 15 16 15 22"/></svg></a>
+    <a href="#" data-slide="1" title="Quem Somos" aria-label="Ir para o slide Quem Somos"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20v-2a7 7 0 0 1 14 0v2"/></svg></a>
+    <a href="#" data-slide="2" title="Serviços" aria-label="Ir para o slide Serviços"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a>
+    <a href="#" data-slide="3" title="Projetos" aria-label="Ir para o slide Projetos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+    <a href="#" data-slide="4" title="Público-alvo" aria-label="Ir para o slide Público-alvo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></a>
+    <a href="#" data-slide="5" title="Diferenciação" aria-label="Ir para o slide Diferenciação"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></a>
+    <a href="#" data-slide="6" title="Fornecedores" aria-label="Ir para o slide Fornecedores"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></a>
+    <a href="#" data-slide="7" title="Documentos Legais" aria-label="Ir para o slide Documentos Legais"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/></svg></a>
+    <a href="#" data-slide="8" title="Pagamento" aria-label="Ir para o slide Pagamento"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><circle cx="8.5" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+    <a href="#" data-slide="9" title="Documentos Estratégicos" aria-label="Ir para o slide Documentos Estratégicos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+    <a href="#" data-slide="10" title="Como Trabalhamos" aria-label="Ir para o slide Como Trabalhamos"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></a>
+    <a href="#" data-slide="11" title="Design System" aria-label="Ir para o slide Design System"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="3"/></svg></a>
+    <a href="#" data-slide="12" title="Sobre" aria-label="Ir para o slide Sobre"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/></svg></a>
+    <a href="#" data-slide="13" title="Contacto" aria-label="Ir para o slide Contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 7 12 13 2 7"/></svg></a>
+</nav>
+
+<div class="right-actions-nav" aria-label="Ações rápidas">
+    <button id="darkModeToggleRight" title="Modo Escuro/Claro" aria-label="Alternar tema escuro/claro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/></svg></button>
+    <button id="prevSlideBtnRight" title="Anterior" aria-label="Slide anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button id="nextSlideBtnRight" title="Seguinte" aria-label="Slide seguinte"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <button id="openModalBtnRight" title="Questionário" aria-label="Abrir questionário"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></button>
+</div>
+
+<div class="bottom-bar">
+    <div class="footer-bottom">© 2026 Laboratório de Palavras — Ideias em Texto | Estúdio Digital de Comunicação</div>
+    <div class="social-icons-horizontal">
+        <a href="#" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="Blogger" aria-label="Blogger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M17.5 8.5h-4.5v-3C13 3.5 14.5 2 17 2h2.5c2.5 0 4.5 2 4.5 4.5v7c0 2.5-2 4.5-4.5 4.5h-10c-2.5 0-4.5-2-4.5-4.5v-7C5 4 7 2 9.5 2H12"/>
+                <path d="M14 13.5h5M14 9.5h5"/>
+            </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<div class="slide-dots" id="slideDots" aria-label="Indicadores de slide"></div>
+
+<button class="focus-toggle-btn" id="focusToggleBtn" aria-label="Alternar modo foco">🎯 Modo Focus</button>
+
+<main class="horizontal-scroll" id="horizontalScroll">
+    
+    <!-- SLIDE 0 – CAPA -->
+    <div class="slide slide-capa" data-index="0">
+        <div class="container">
+            <div class="capa-content">
+                <div class="hero-subtitle">ESTÚDIO DIGITAL DE COMUNICAÇÃO E ESCRITA PROFISSIONAL</div>
+                <h1>Laboratório de Palavras<br><span class="highlight">Ideias em Texto</span></h1>
+                <p class="text-body" style="font-size: clamp(0.95rem, 3vw, 1.05rem);"><strong class="typing-text" style="color: var(--accent-secondary);">Alma · limpa · profissional · forte</strong></p>
+                <hr>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem;">
+                    <span class="info-badge">Comunicação cuidada</span>
+                    <span class="info-badge">Excelência editorial</span>
+                    <span class="info-badge">Modelo 100% online</span>
+                    <span class="info-badge">Atuação global</span>
+                </div>
+                <div class="illustration-capa" style="margin: 2rem 0;">
+                    <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 400px;" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="capaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--accent-light);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgba(198,164,63,0.05);stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#C6A43F" />
+                                <stop offset="100%" style="stop-color:#E8D5A3" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="500" height="150" fill="url(#capaGrad)" rx="18" stroke="none"/>
+                        <circle cx="250" cy="65" r="32" stroke="var(--blue-corporate)" stroke-width="1.5" stroke-dasharray="6,5" fill="none"/>
+                        <circle cx="250" cy="65" r="15" fill="var(--blue-corporate)" opacity="0.15" stroke="none"/>
+                        <polygon points="250,38 262,58 285,58 267,72 273,95 250,82 227,95 233,72 215,58 238,58" fill="url(#goldGrad)" opacity="0.6" stroke="none"/>
+                        <rect x="215" y="115" width="70" height="7" rx="3" fill="var(--blue-corporate)" opacity="0.3" stroke="none"/>
+                        <line x1="80" y1="135" x2="420" y2="135" stroke="var(--blue-corporate)" stroke-dasharray="4,4" opacity="0.25"/>
+                    </svg>
+                </div>
+                <a href="#" class="btn-read-article" id="startExploreBtn" style="margin-top: 0.5rem;">Explorar Estúdio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 1 – QUEM SOMOS -->
+    <div class="slide" data-index="1">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Quem Somos</h2>
+                    <p class="text-body">O Laboratório de Palavras – Ideias em Texto é um estúdio digital dedicado à criação, revisão e estruturação de conteúdos profissionais. Trabalhamos com rigor editorial, intenção comunicativa e atenção absoluta ao detalhe.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-quem-somos">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--gold-premium)"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 – SERVIÇOS -->
+    <div class="slide" data-index="2">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>O Que Fazemos</h2>
+                    <p class="text-body">Oferecemos um ecossistema completo de serviços editoriais, desde a concepção até à revisão final. Cada serviço é modular e pode ser combinado conforme a necessidade do seu projeto.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-servicos">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3 – PROJETOS -->
+    <div class="slide" data-index="3">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Projetos em Destaque</h2>
+                    <p class="text-body">Nos últimos 12 meses, colaborámos com mais de 20 clientes em projetos que vão desde manuais de identidade textual a revisões de teses de doutoramento.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-projetos">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4 – PÚBLICO-ALVO -->
+    <div class="slide" data-index="4">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Para Quem Trabalhamos</h2>
+                    <p class="text-body">O nosso serviço é desenhado para profissionais e organizações que valorizam a qualidade da comunicação escrita como um activo estratégico.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-publico">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 20v-2a7 7 0 0 1 14 0v2"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5 – DIFERENCIAÇÃO -->
+    <div class="slide" data-index="5">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Diferenciação</h2>
+                    <p class="text-body">Num mercado saturado de conteúdo genérico, a nossa assinatura é a precisão. Eis o que nos torna diferentes.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-diferenciacao">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><circle cx="12" cy="12" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6 – FORNECEDORES -->
+    <div class="slide" data-index="6">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Fornecedores Essenciais</h2>
+                    <p class="text-body">A nossa infraestrutura digital é sustentada por ferramentas empresariais de topo, garantindo segurança, performance e colaboração.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-fornecedores">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="1.5" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7 – DOCUMENTOS LEGAIS -->
+    <div class="slide" data-index="7">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Compromisso Legal & Transparência</h2>
+                    <p class="text-body">Confiança, clareza e proteção dos nossos parceiros. Documentos fundamentais para uma relação editorial segura.</p>
+                    <div class="accordion-premium">
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M12 2L3 7v7c0 5 9 8 9 8s9-3 9-8V7l-9-5z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <circle cx="12" cy="16" r="0.5" fill="currentColor" stroke="none"/>
+                                    </svg>
+                                </span>
+                                <span class="accordion-title">Política de Privacidade</span>
+                                <span class="accordion-indicator">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content"><div class="accordion-inner"><p class="text-body">O Laboratório de Palavras respeita a sua privacidade. Os dados pessoais fornecidos são utilizados exclusivamente para a execução dos serviços contratados, comunicação sobre projetos e envio de informações relevantes. Não partilhamos os seus dados com terceiros sem consentimento explícito.</p></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14 2 14 8 20 8"/>
+                                        <line x1="8" y1="13" x2="16" y2="13"/>
+                                        <line x1="8" y1="17" x2="12" y2="17"/>
+                                    </svg>
+                                </span>
+                                <span class="accordion-title">Termos de Uso</span>
+                                <span class="accordion-indicator">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content"><div class="accordion-inner"><p class="text-body">Ao aceder e utilizar os serviços do Laboratório de Palavras, concorda em cumprir estes Termos de Uso. Todo o conteúdo produzido é propriedade intelectual do estúdio ou licenciado para o cliente mediante acordo.</p></div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span class="accordion-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="5" y="11" width="14" height="11" rx="2" ry="2"/>
+                                        <path d="M8 11V8c0-2 2-4 4-4s4 2 4 4v3"/>
+                                        <circle cx="12" cy="16" r="1"/>
+                                    </svg>
+                                </span>
+                                <span class="accordion-title">Política de Confidencialidade</span>
+                                <span class="accordion-indicator">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                                </span>
+                            </button>
+                            <div class="accordion-content"><div class="accordion-inner"><p class="text-body">Todas as informações, documentos, rascunhos e ideias partilhadas com o Laboratório de Palavras são tratados com o mais elevado nível de confidencialidade. Não divulgamos nenhum material do cliente sem autorização expressa.</p></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8 – PAGAMENTO -->
+    <div class="slide" data-index="8">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Formas de Pagamento</h2>
+                    <p class="text-body">Transações seguras, transparentes e adaptadas à sua preferência. Todos os métodos emitem comprovativo oficial.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-pagamento">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="12" cy="12" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 9 – DOCUMENTOS ESTRATÉGICOS -->
+    <div class="slide" data-index="9">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Documentos Estratégicos</h2>
+                    <p class="text-body">Construímos uma base de conhecimento interna que garante consistência e qualidade em todos os projetos.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-documentos">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 10 – COMO TRABALHAMOS -->
+    <div class="slide" data-index="10">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Como Trabalhamos</h2>
+                    <p class="text-body">O nosso processo editorial é transparente, colaborativo e orientado a resultados. Do briefing à entrega final.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-trabalhamos">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 11 – DESIGN SYSTEM -->
+    <div class="slide" data-index="11">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Design System</h2>
+                    <p class="text-body">Identidade visual e estrutural do Laboratório de Palavras — um ecossistema editorial pensado para transmitir elegância, rigor e clareza.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-design">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="1" stroke="var(--gold-premium)"/><circle cx="12" cy="12" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 12 – SOBRE -->
+    <div class="slide" data-index="12">
+        <div class="container">
+            <div class="grid-editorial">
+                <div class="col-texto">
+                    <h2>Sobre o Laboratório de Palavras</h2>
+                    <p class="text-body">O Laboratório de Palavras – Ideias em Texto é um estúdio digital de comunicação e escrita profissional, 100% online.</p>
+                    <button class="btn-read-article" uk-toggle="target: #modal-sobre">Ler artigo completo →</button>
+                </div>
+                <div class="col-svg"><svg viewBox="0 0 24 24" stroke="var(--blue-corporate)" stroke-width="1.2" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--gold-premium)"/><circle cx="12" cy="12" r="2" fill="var(--gold-premium)" stroke="none"/></svg></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 13 – CONTACTO -->
+    <div class="slide" data-index="13">
+        <div class="container">
+            <div class="grid-editorial" style="grid-template-columns: 1fr;">
+                <div>
+                    <h2>Contacto</h2>
+                    <p class="text-body">Disponível para novos projetos, parcerias e mentoria de escrita. Canal directo, resposta ágil, postura profissional.</p>
+                    <ul class="list-icon">
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/></svg> <a href="mailto:hello@laboratoriopalavras.estudio" style="color: var(--gold-premium);">hello@laboratoriopalavras.estudio</a></li>
+                        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> <a href="#" style="color: var(--gold-premium);">laboratoriopalavras.com</a></li>
+                    </ul>
+                    <div class="card-note">Resposta em até 24h úteis · compromisso com a clareza.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- MODAIS DE ARTIGO (UIkit Container) -->
+<div id="modal-quem-somos" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Quem Somos</h1>
+            <p class="uk-article-meta">Publicado por Laboratório de Palavras | Edição 2026</p>
+            <p class="uk-text-lead">O Laboratório de Palavras – Ideias em Texto é um estúdio digital dedicado à criação, revisão e estruturação de conteúdos profissionais. Trabalhamos com rigor editorial, intenção comunicativa e atenção absoluta ao detalhe.</p>
+            <p>Acreditamos que a escrita profissional é uma ferramenta de transformação. Um texto bem estruturado não apenas informa – convence, inspira e constrói confiança. Por isso, cada projeto que aceitamos é tratado como uma parceria editorial, onde o seu sucesso é o nosso sucesso.</p>
+            <p>Somos movidos pela curiosidade, pela precisão e pela paixão de ver ideias ganharem forma em palavras. Mais do que um serviço, oferecemos uma curadoria linguística que respeita a sua voz e amplifica a sua mensagem.</p>
+            <p>O Laboratório de Palavras nasce para devolver sentido à comunicação escrita. Num mundo onde a informação é abundante, a clareza é luxo.</p>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-servicos" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">O Que Fazemos</h1>
+            <p class="uk-article-meta">Cinco serviços integrados num fluxo editorial contínuo</p>
+            <p class="uk-text-lead">Oferecemos um ecossistema completo de serviços editoriais, desde a concepção até à revisão final. Cada serviço é modular e pode ser combinado conforme a necessidade do seu projeto.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Criação de textos profissionais (artigos, landing pages, newsletters)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Revisão e melhoria de conteúdos existentes</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg> Estruturação de documentos (teses, relatórios, manuais)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Apoio à escrita criativa e mentoria editorial</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4M12 18v4"/></svg> Acompanhamento personalizado para marcas e executivos</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-projetos" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Projetos em Destaque</h1>
+            <p class="uk-article-meta">+23 projetos entregues no último semestre</p>
+            <p class="uk-text-lead">Nos últimos 12 meses, colaborámos com mais de 20 clientes em projetos que vão desde manuais de identidade textual a revisões de teses de doutoramento.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg> Manual de Identidade Textual — Studio Axioma</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Revisão de Tese Doutoramento — Mariana F. (Universidade do Porto)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Artigos para Blog Corporativo — Agência Conecta</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 22 7 22 17 12 22 2 17 2 7 12 2"/></svg> Estruturação de Pitch — Startup InovHelp</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-publico" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Para Quem Trabalhamos</h1>
+            <p class="uk-article-meta">Profissionais, empresas e formandos que exigem excelência</p>
+            <p class="uk-text-lead">O nosso serviço é desenhado para profissionais e organizações que valorizam a qualidade da comunicação escrita como um activo estratégico.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/></svg> Profissionais liberais, executivos e consultores</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Pequenos negócios e empreendedores em crescimento</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14"/></svg> Formandos (graduação, mestrado, doutoramento)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Marcas que desejam uma voz consistente e autêntica</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-diferenciacao" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Diferenciação</h1>
+            <p class="uk-article-meta">Excelência editorial, clareza e identidade própria</p>
+            <p class="uk-text-lead">Num mercado saturado de conteúdo genérico, a nossa assinatura é a precisão. Eis o que nos torna diferentes.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Excelência editorial com curadoria humana</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Clareza e intenção em cada palavra</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Identidade própria para cada projeto</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v8H4v-8M12 2v12"/></svg> Serviço premium, discreto e confidencial</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-fornecedores" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Fornecedores Essenciais</h1>
+            <p class="uk-article-meta">Infraestrutura digital empresarial de topo</p>
+            <p class="uk-text-lead">A nossa infraestrutura digital é sustentada por ferramentas empresariais de topo, garantindo segurança, performance e colaboração em tempo real.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Microsoft 365 Business</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Google Workspace Business</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Adobe Acrobat Pro</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2"/></svg> Starlink Business</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-pagamento" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Formas de Pagamento</h1>
+            <p class="uk-article-meta">Transações seguras e transparentes</p>
+            <p class="uk-text-lead">Transações seguras, transparentes e adaptadas à sua preferência. Todos os métodos emitem comprovativo oficial.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/></svg> Transferência Bancária (IBAN nacional)</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2l2-5 3 8 3-8 2 5h2"/></svg> MB Way</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/></svg> PayPal</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg> Fatura / Recibo Eletrónico</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-documentos" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Documentos Estratégicos</h1>
+            <p class="uk-article-meta">Base de conhecimento interno em crescimento</p>
+            <p class="uk-text-lead">Construímos uma base de conhecimento interna que garante consistência e qualidade em todos os projetos.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Guia de Tom Editorial — versão 2.0</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/></svg> Modelo de Proposta Comercial</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Checklist de Revisão Textual</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Estrutura de Tese ABNT</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-trabalhamos" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Como Trabalhamos</h1>
+            <p class="uk-article-meta">Processo editorial transparente e colaborativo</p>
+            <p class="uk-text-lead">O nosso processo editorial é transparente, colaborativo e orientado a resultados. Desde o primeiro contacto até à entrega final, mantemos uma comunicação clara e objectivos bem definidos.</p>
+            <ul class="list-icon">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 22 7 22 17 12 22 2 17 2 7 12 2"/></svg> Briefing → Rascunho → Revisão → Entrega</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Comunicação directa e sem ruído</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v8H4v-8M12 2v12"/></svg> Cumprimento rigoroso de prazos</li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg> Acompanhamento pós-entrega</li>
+            </ul>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-design" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Design System</h1>
+            <p class="uk-article-meta">ALM — Luxury Design System</p>
+            <p class="uk-text-lead">Identidade visual e estrutural do Laboratório de Palavras — um ecossistema editorial pensado para transmitir elegância, rigor e clareza.</p>
+            <p><strong>Princípios:</strong> Luxo Silencioso, Clareza e Intenção, Respiração Editorial.</p>
+            <p><strong>Paleta Essencial:</strong> Azul Profundo (#0A1A2F), Ouro Sofisticado (#C6A43F), Cinzas Elegantes (#2C2C36), Creme (#F9F7F2).</p>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<div id="modal-sobre" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close aria-label="Fechar"></button>
+        <article class="uk-article">
+            <h1 class="uk-article-title">Sobre o Laboratório de Palavras</h1>
+            <p class="uk-article-meta">Estúdio digital de comunicação e escrita profissional</p>
+            <p class="uk-text-lead">O Laboratório de Palavras – Ideias em Texto é um estúdio digital de comunicação e escrita profissional, 100% online. Fundado sobre clareza, rigor e intenção, serve clientes que exigem excelência textual.</p>
+            <p>Diferencia-se pela atenção ao detalhe e pela capacidade de transformar ideias em comunicação clara, organizada e com impacto. Modelo remoto com atuação global.</p>
+            <div class="uk-margin-medium-top">
+                <button class="uk-button uk-button-text uk-modal-close">Fechar</button>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- MODAL QUESTIONÁRIO FULLSCREEN -->
+<div class="uk-modal-full quiz-modal-full" id="quizModalFull" uk-modal>
+    <div class="uk-modal-dialog quiz-modal-dialog">
+        <button class="uk-modal-close-full quiz-close-btn" type="button" uk-close aria-label="Fechar questionário"></button>
+        
+        <div class="quiz-modal-container">
+            <div class="quiz-svg-wrapper">
+                <svg viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="quizBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0055A4"/>
+                            <stop offset="100%" stop-color="#1A6BB5"/>
+                        </linearGradient>
+                        <linearGradient id="quizGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#C6A43F"/>
+                            <stop offset="100%" stop-color="#E8D5A3"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <g stroke="url(#quizBlueGrad)" stroke-width="1.8" stroke-linecap="round" fill="none">
+                        <line x1="35" y1="32" x2="175" y2="32" opacity="0.9"/>
+                        <line x1="35" y1="44" x2="145" y2="44" opacity="0.6"/>
+                        <line x1="35" y1="56" x2="160" y2="56" opacity="0.35"/>
+                        <line x1="35" y1="68" x2="130" y2="68" opacity="0.2"/>
+                    </g>
+                    
+                    <g transform="translate(250, 50)">
+                        <polygon points="0,-20 8,-6 23,-6 11,4 15,20 0,11 -15,20 -11,4 -23,-6 -8,-6" 
+                                 fill="url(#quizGoldGrad)" opacity="0.85"/>
+                        <circle cx="0" cy="0" r="18" stroke="url(#quizGoldGrad)" stroke-width="1" stroke-dasharray="3 5" fill="none" opacity="0.4"/>
+                    </g>
+                    
+                    <g stroke="url(#quizBlueGrad)" stroke-width="1.8" stroke-linecap="round" fill="none">
+                        <line x1="325" y1="32" x2="465" y2="32" opacity="0.2"/>
+                        <line x1="340" y1="44" x2="465" y2="44" opacity="0.35"/>
+                        <line x1="355" y1="56" x2="465" y2="56" opacity="0.6"/>
+                        <line x1="370" y1="68" x2="465" y2="68" opacity="0.9"/>
+                    </g>
+                    
+                    <text x="250" y="115" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="10" fill="url(#quizGoldGrad)" opacity="0.5" letter-spacing="6" font-style="italic">ALMA · LIMPA · PROFISSIONAL · FORTE</text>
+                    
+                    <circle cx="35" cy="95" r="2.5" fill="url(#quizGoldGrad)" opacity="0.6"/>
+                    <circle cx="465" cy="95" r="2.5" fill="url(#quizGoldGrad)" opacity="0.6"/>
+                    <line x1="80" y1="102" x2="420" y2="102" stroke="url(#quizBlueGrad)" stroke-width="0.5" opacity="0.12"/>
+                </svg>
+            </div>
+            
+            <div class="quiz-header">
+                <span class="quiz-badge">ESTÚDIO DIGITAL DE COMUNICAÇÃO E ESCRITA PROFISSIONAL</span>
+                <h2 class="quiz-title">
+                    Laboratório de Palavras<br><span class="quiz-title-accent">Ideias em Texto</span>
+                    <span class="quiz-info-tooltip" title="As suas respostas são confidenciais e ajudam-nos a preparar um diagnóstico personalizado." aria-label="Informação">
+                        <svg viewBox="0 0 24 24" width="16" height="16" style="vertical-align: middle;" stroke="currentColor" fill="none" stroke-width="1.5" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <circle cx="12" cy="8" r="0.5" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </span>
+                </h2>
+                <div class="quiz-divider"></div>
+                <p class="quiz-description">Comunique com clareza. Responda em menos de 2 minutos.</p>
+            </div>
+            
+            <div class="quiz-progress-container">
+                <div class="quiz-progress-bar" style="width: 20%;"></div>
+                <div class="quiz-progress-steps">
+                    <span>Início</span>
+                    <span id="quizStepIndicator">1 / 5</span>
+                    <span>Fim</span>
+                </div>
+            </div>
+            
+            <div id="quizStepperContainer">
+                <form id="quizFullForm" action="https://formsubmit.co/ajax/textxto@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Novo Questionário - Laboratório de Palavras">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div id="quizStep1" class="quiz-step active-step">
+                        <p class="quiz-question">1/5 · Qual é o objetivo principal da sua comunicação?</p>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-opt-btn" data-step="1" data-value="Clareza">Clareza</button>
+                            <button type="button" class="quiz-opt-btn" data-step="1" data-value="Profissionalismo">Profissionalismo</button>
+                            <button type="button" class="quiz-opt-btn" data-step="1" data-value="Organização">Organização</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quizStep2" class="quiz-step">
+                        <p class="quiz-question">2/5 · Como descreve o seu estilo ideal?</p>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-opt-btn" data-step="2" data-value="Minimalista">Minimalista</button>
+                            <button type="button" class="quiz-opt-btn" data-step="2" data-value="Editorial">Editorial</button>
+                            <button type="button" class="quiz-opt-btn" data-step="2" data-value="Técnico">Técnico</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quizStep3" class="quiz-step">
+                        <p class="quiz-question">3/5 · Qual é o maior desafio atual?</p>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-opt-btn" data-step="3" data-value="Falta de estrutura">Falta de estrutura</button>
+                            <button type="button" class="quiz-opt-btn" data-step="3" data-value="Falta de tempo">Falta de tempo</button>
+                            <button type="button" class="quiz-opt-btn" data-step="3" data-value="Falta de clareza">Falta de clareza</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quizStep4" class="quiz-step">
+                        <p class="quiz-question">4/5 · O que procura num estúdio de comunicação?</p>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-opt-btn" data-step="4" data-value="Direção">Direção</button>
+                            <button type="button" class="quiz-opt-btn" data-step="4" data-value="Execução">Execução</button>
+                            <button type="button" class="quiz-opt-btn" data-step="4" data-value="Revisão">Revisão</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quizStep5" class="quiz-step">
+                        <p class="quiz-question">5/5 · Prefere um acompanhamento?</p>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-opt-btn" data-step="5" data-value="Pontual">Pontual</button>
+                            <button type="button" class="quiz-opt-btn" data-step="5" data-value="Contínuo">Contínuo</button>
+                        </div>
+                        <div class="quiz-email-group">
+                            <label for="quiz_email" class="quiz-email-label">Onde podemos enviar o diagnóstico?</label>
+                            <input type="email" name="email" id="quiz_email" class="quiz-email-input" placeholder="exemplo@dominio.com" required>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" name="objetivo" id="quiz_objetivo">
+                    <input type="hidden" name="estilo" id="quiz_estilo">
+                    <input type="hidden" name="desafio" id="quiz_desafio">
+                    <input type="hidden" name="procura" id="quiz_procura">
+                    <input type="hidden" name="acompanhamento" id="quiz_acompanhamento">
+                    
+                    <div class="quiz-nav">
+                        <button type="button" id="quizPrevBtn" class="quiz-nav-btn" disabled>← Anterior</button>
+                        <button type="button" id="quizNextBtn" class="quiz-nav-btn quiz-nav-primary">Seguinte →</button>
+                        <button type="submit" id="quizSubmitBtn" class="quiz-nav-btn quiz-nav-primary" style="display: none;">Enviar Respostas</button>
+                    </div>
+                </form>
+                
+                <div id="quizSuccessMsg" class="quiz-success" style="display: none;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Obrigado. Entraremos em contacto em breve.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit-icons.min.js"></script>
+<script>
+(function() {
+    // ============================================ //
+    // PRELOADER                                   //
+    // ============================================ //
+    const preloader = document.getElementById('preloader');
+    if(preloader) setTimeout(() => preloader.classList.add('hide'), 1000);
+
+    // ============================================ //
+    // DOTS INDICADORES E PROGRESS BAR              //
+    // ============================================ //
+    const scrollContainer = document.getElementById('horizontalScroll');
+    const slides = document.querySelectorAll('.slide');
+    const sideLinks = document.querySelectorAll('.side-nav a[data-slide]');
+    const prevBtnRight = document.getElementById('prevSlideBtnRight');
+    const nextBtnRight = document.getElementById('nextSlideBtnRight');
+    const startExplore = document.getElementById('startExploreBtn');
+    const darkToggleRight = document.getElementById('darkModeToggleRight');
+    const progressBar = document.getElementById('slideProgressBar');
+    const dotsContainer = document.getElementById('slideDots');
+    const focusToggle = document.getElementById('focusToggleBtn');
+    
+    let currentIndex = 0;
+    let isScrolling = false;
+    const totalSlides = slides.length;
+    
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Ir para o slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    const dots = document.querySelectorAll('.dot');
+    
+    function updateProgress() {
+        const percent = ((currentIndex + 1) / totalSlides) * 100;
+        progressBar.style.width = `${percent}%`;
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+        sideLinks.forEach(link => {
+            const idx = parseInt(link.getAttribute('data-slide'));
+            if (idx === currentIndex) link.classList.add('active');
+            else link.classList.remove('active');
+        });
+    }
+    
+    function goToSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= totalSlides) index = totalSlides - 1;
+        if (index === currentIndex) return;
+        
+        currentIndex = index;
+        slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        updateProgress();
+    }
+    
+    function nextSlide() { if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1); }
+    function prevSlide() { if (currentIndex > 0) goToSlide(currentIndex - 1); }
+    
+    let scrollTimeout;
+    scrollContainer.addEventListener('scroll', () => {
+        if (isScrolling) return;
+        isScrolling = true;
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const scrollPos = scrollContainer.scrollLeft;
+            const slideWidth = scrollContainer.clientWidth;
+            let newIndex = Math.round(scrollPos / slideWidth);
+            newIndex = Math.min(Math.max(0, newIndex), totalSlides - 1);
+            if (newIndex !== currentIndex) {
+                currentIndex = newIndex;
+                updateProgress();
+            }
+            isScrolling = false;
+        }, 50);
+    });
+    
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { prevSlide(); e.preventDefault(); }
+        else if (e.key === 'ArrowRight') { nextSlide(); e.preventDefault(); }
+    });
+    
+    if (prevBtnRight) prevBtnRight.addEventListener('click', prevSlide);
+    if (nextBtnRight) nextBtnRight.addEventListener('click', nextSlide);
+    if (startExplore) startExplore.addEventListener('click', (e) => { e.preventDefault(); goToSlide(1); });
+    
+    sideLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const idx = parseInt(link.getAttribute('data-slide'));
+            if (!isNaN(idx)) goToSlide(idx);
+        });
+    });
+    
+    // ============================================ //
+    // TEMA NOTURNO AUTOMÁTICO                      //
+    // ============================================ //
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+    
+    const hour = new Date().getHours();
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        setTheme((hour >= 19 || hour <= 6) ? 'dark' : 'light');
+    }
+    
+    if (darkToggleRight) {
+        darkToggleRight.addEventListener('click', () => setTheme(document.body.classList.contains('dark') ? 'light' : 'dark'));
+    }
+    
+    // ============================================ //
+    // RIPPLE EFFECT PARA BOTÕES                    //
+    // ============================================ //
+    function createRipple(event, element) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const rect = element.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = event.clientX - rect.left - size / 2 + 'px';
+        ripple.style.top = event.clientY - rect.top - size / 2 + 'px';
+        element.style.position = 'relative';
+        element.style.overflow = 'hidden';
+        element.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 500);
+    }
+    
+    document.querySelectorAll('.btn-read-article, .quiz-nav-primary, .right-actions-nav button, .side-nav a, .social-icons-horizontal a').forEach(btn => {
+        btn.addEventListener('click', (e) => createRipple(e, btn));
+    });
+    
+    // ============================================ //
+    // ACCORDION                                    //
+    // ============================================ //
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const expanded = header.getAttribute('aria-expanded') === 'true' ? false : true;
+            header.setAttribute('aria-expanded', expanded);
+            const content = header.nextElementSibling;
+            content.style.maxHeight = expanded ? content.scrollHeight + 'px' : null;
+        });
+    });
+    
+    // ============================================ //
+    // FOCUS MODE                                   //
+    // ============================================ //
+    if (focusToggle) {
+        focusToggle.addEventListener('click', () => {
+            document.body.classList.toggle('focus-mode');
+            focusToggle.textContent = document.body.classList.contains('focus-mode') ? '✨ Sair Focus' : '🎯 Modo Focus';
+        });
+    }
+    
+    // ============================================ //
+    // QUESTIONÁRIO REFINADO                        //
+    // ============================================ //
+    const quizModalTrigger = document.getElementById('openModalBtnRight');
+    const quizModal = document.getElementById('quizModalFull');
+    const quizAnswers = {1: null, 2: null, 3: null, 4: null, 5: null};
+    let quizCurrentStep = 1;
+    
+    const quizSteps = document.querySelectorAll('#quizFullForm .quiz-step');
+    const quizPrevBtn = document.getElementById('quizPrevBtn');
+    const quizNextBtn = document.getElementById('quizNextBtn');
+    const quizSubmitBtn = document.getElementById('quizSubmitBtn');
+    const quizFormElement = document.getElementById('quizFullForm');
+    const quizProgressBar = document.querySelector('.quiz-progress-bar');
+    const quizStepIndicator = document.getElementById('quizStepIndicator');
+    
+    function showNotification(message, status = 'warning') {
+        if (UIkit.notification) {
+            UIkit.notification({
+                message: `<span style="font-family: 'Inter';">${message}</span>`,
+                status: status,
+                pos: 'top-center',
+                timeout: 3000,
+            });
+        } else {
+            alert(message);
+        }
+    }
+    
+    function updateQuizProgress(step) {
+        const percent = (step / 5) * 100;
+        if (quizProgressBar) quizProgressBar.style.width = `${percent}%`;
+        if (quizStepIndicator) quizStepIndicator.textContent = `${step} / 5`;
+    }
+    
+    function checkAllAnswersAndUpdatePulse() {
+        const allAnswered = quizAnswers[1] && quizAnswers[2] && quizAnswers[3] && quizAnswers[4] && quizAnswers[5];
+        if (allAnswered && quizSubmitBtn) {
+            quizSubmitBtn.classList.add('ready-to-submit');
+        } else if (quizSubmitBtn) {
+            quizSubmitBtn.classList.remove('ready-to-submit');
+        }
+    }
+    
+    function celebrate() {
+        const container = document.querySelector('.quiz-modal-container');
+        if (!container) return;
+        
+        for (let i = 0; i < 40; i++) {
+            const confetto = document.createElement('div');
+            confetto.style.position = 'absolute';
+            confetto.style.width = '6px';
+            confetto.style.height = '6px';
+            confetto.style.backgroundColor = i % 2 === 0 ? 'var(--quiz-accent-gold)' : 'var(--quiz-accent-blue)';
+            confetto.style.borderRadius = '50%';
+            confetto.style.left = Math.random() * 100 + '%';
+            confetto.style.top = '-10px';
+            confetto.style.opacity = '0.8';
+            confetto.style.pointerEvents = 'none';
+            confetto.style.zIndex = '1000';
+            confetto.style.animation = `confettoFall ${0.8 + Math.random() * 0.5}s ease-out forwards`;
+            container.appendChild(confetto);
+            setTimeout(() => confetto.remove(), 1500);
+        }
+    }
+    
+    function showQuizStep(step) {
+        quizSteps.forEach((s, idx) => {
+            s.classList.toggle('active-step', idx + 1 === step);
+        });
+        quizPrevBtn.disabled = (step === 1);
+        updateQuizProgress(step);
+        
+        if (step === 5) {
+            quizNextBtn.style.display = 'none';
+            quizSubmitBtn.style.display = 'inline-flex';
+        } else {
+            quizNextBtn.style.display = 'inline-flex';
+            quizSubmitBtn.style.display = 'none';
+        }
+    }
+    
+    document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const step = parseInt(btn.dataset.step);
+            const value = btn.dataset.value;
+            quizAnswers[step] = value;
+            const fieldMap = ['objetivo', 'estilo', 'desafio', 'procura', 'acompanhamento'];
+            if (step >= 1 && step <= 5) {
+                document.getElementById(`quiz_${fieldMap[step-1]}`).value = value;
+            }
+            
+            document.querySelectorAll(`.quiz-opt-btn[data-step="${step}"]`).forEach(b => {
+                b.classList.remove('selected');
+                b.style.background = '';
+                b.style.color = '';
+            });
+            btn.classList.add('selected');
+            btn.style.background = 'var(--quiz-accent-gold)';
+            btn.style.color = 'var(--quiz-card-bg)';
+            
+            checkAllAnswersAndUpdatePulse();
+            
+            if (step < 5) {
+                quizCurrentStep = step + 1;
+                showQuizStep(quizCurrentStep);
+            } else if (step === 5) {
+                showQuizStep(5);
+            }
+        });
+    });
+    
+    if (quizPrevBtn) {
+        quizPrevBtn.addEventListener('click', () => {
+            if (quizCurrentStep > 1) {
+                quizCurrentStep--;
+                showQuizStep(quizCurrentStep);
+            }
+        });
+    }
+    
+    if (quizNextBtn) {
+        quizNextBtn.addEventListener('click', () => {
+            if (quizAnswers[quizCurrentStep]) {
+                if (quizCurrentStep < 5) {
+                    quizCurrentStep++;
+                    showQuizStep(quizCurrentStep);
+                }
+            } else {
+                showNotification('Por favor, selecione uma opção antes de continuar.', 'warning');
+            }
+        });
+    }
+    
+    if (quizFormElement) {
+        quizFormElement.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const emailField = document.getElementById('quiz_email');
+            if (!emailField.value || !emailField.checkValidity()) {
+                showNotification('Por favor, insira um email válido.', 'danger');
+                emailField.focus();
+                return;
+            }
+            
+            for (let i = 1; i <= 5; i++) {
+                if (!quizAnswers[i]) {
+                    showNotification('Por favor, responda a todas as perguntas.', 'warning');
+                    return;
+                }
+            }
+            
+            const originalBtnText = quizSubmitBtn.innerHTML;
+            quizSubmitBtn.disabled = true;
+            quizSubmitBtn.innerHTML = '<span uk-spinner="ratio: 0.6"></span> Enviando...';
+            quizSubmitBtn.style.opacity = '0.7';
+            
+            const formData = new FormData(quizFormElement);
+            try {
+                const response = await fetch(quizFormElement.action, { 
+                    method: 'POST', 
+                    body: formData, 
+                    headers: { 'Accept': 'application/json' } 
+                });
+                if (response.ok) {
+                    celebrate();
+                    const successMsg = document.getElementById('quizSuccessMsg');
+                    successMsg.style.display = 'flex';
+                    quizFormElement.reset();
+                    Object.keys(quizAnswers).forEach(k => quizAnswers[k] = null);
+                    quizCurrentStep = 1;
+                    showQuizStep(1);
+                    
+                    document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+                        btn.classList.remove('selected');
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    });
+                    
+                    setTimeout(() => {
+                        if (quizModal && UIkit.modal(quizModal)) UIkit.modal(quizModal).hide();
+                        successMsg.style.display = 'none';
+                        if (quizSubmitBtn) quizSubmitBtn.classList.remove('ready-to-submit');
+                    }, 3000);
+                } else {
+                    showNotification('Erro no envio. Tente novamente mais tarde.', 'danger');
+                }
+            } catch (err) {
+                showNotification('Erro de conexão. Verifique a sua internet.', 'danger');
+            } finally {
+                quizSubmitBtn.innerHTML = originalBtnText;
+                quizSubmitBtn.disabled = false;
+                quizSubmitBtn.style.opacity = '1';
+            }
+        });
+    }
+    
+    if (quizModalTrigger && quizModal) {
+        quizModalTrigger.addEventListener('click', () => {
+            quizCurrentStep = 1;
+            showQuizStep(1);
+            document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+                btn.classList.remove('selected');
+                btn.style.background = '';
+                btn.style.color = '';
+            });
+            Object.keys(quizAnswers).forEach(k => quizAnswers[k] = null);
+            const emailField = document.getElementById('quiz_email');
+            if (emailField) emailField.value = '';
+            if (quizSubmitBtn) quizSubmitBtn.classList.remove('ready-to-submit');
+            UIkit.modal(quizModal).show();
+        });
+    }
+    
+    updateProgress();
+    goToSlide(0);
+})();
+</script>
+</body>
+</html>
