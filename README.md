@@ -1,10 +1,4 @@
-<!-- Banner -->
-<p align="center" style="margin-bottom: 0;">
-
-  <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="5%">
-</p>
-
-<!-- Título e Subtítulo -->
+<!-- Banner --> <!-- Título e Subtítulo -->
 
 <h1 align="center"><img src="https://stride.microsoft.com/icons/agent_logo.svg" width="5%">  ALM – Luxury Design System</h1>
 <p align="center">
