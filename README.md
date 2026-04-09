@@ -1,6 +1,6 @@
 <!-- Banner -->
 <p align="center">
-  <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="100%">
+  <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="10%">
 </p>
 
 <!-- Título e Subtítulo -->
