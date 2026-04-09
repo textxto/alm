@@ -1,8 +1,3 @@
-<!-- Banner -->
-<p align="center">
-  <img src="https://via.placeholder.com/1200x300/0A1A2F/C6A43F?text=ALM+Luxury+Design+System" alt="ALM Banner" width="100%">
-</p>
-
 <!-- Título e Subtítulo -->
 <h1 align="center">
   <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="3%" style="vertical-align: middle;"> ALM – Luxury Design System
