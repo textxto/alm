@@ -1,6 +1,12 @@
-<!-- Banner --> <!-- Título e Subtítulo -->
+<!-- Banner -->
+<p align="center">
+  <img src="https://via.placeholder.com/1200x300/0A1A2F/C6A43F?text=ALM+Luxury+Design+System" alt="ALM Banner" width="100%">
+</p>
 
-<h1 align="center"><img src="https://stride.microsoft.com/icons/agent_logo.svg" width="3%">  ALM – Luxury Design System</h1>
+<!-- Título e Subtítulo -->
+<h1 align="center">
+  <img src="https://stride.microsoft.com/icons/agent_logo.svg" width="3%" style="vertical-align: middle;"> ALM – Luxury Design System
+</h1>
 <p align="center">
   <strong>Laboratório de Palavras | Ideias em Texto</strong><br>
   <em>Estúdio Digital de Comunicação e Escrita Profissional</em>
@@ -62,6 +68,8 @@ O **ALM – Luxury Design System** é a identidade visual e estrutural do Labora
 
 - **Email:** hello@laboratoriopalavras.estudio
 - **Estúdio:** Laboratório de Palavras – Ideias em Texto
+- **Instagram:** [@textxto](https://instagram.com/textxto)
+- **LinkedIn:** [in/textxto](https://www.linkedin.com/in/textxto)
 
 ---
 
