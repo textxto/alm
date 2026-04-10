@@ -1,0 +1,27 @@
+﻿name: "Auto-Restauração do Tema"
+
+on:
+  workflow_run:
+    workflows: ["Verificar Integridade do Tema"]
+    types: [completed]
+
+jobs:
+  restore:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Restaurar tema original
+        run: |
+          git checkout HEAD~1 -- .
+          git config user.name "Security Restore Bot"
+          git add -A
+          git commit -m "Auto-restore: Tema restaurado" || true
+          git push --force
