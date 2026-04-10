@@ -36,15 +36,6 @@
   </a>
 </p>
 
-  <a href="https://www.linkedin.com/in/textxto">
-    <img src="https://img.shields.io/badge/LinkedIn-C6A43F?style=for-the-badge&logo=linkedin&logoColor=0A1A2F&color=C6A43F" alt="LinkedIn">
-  </a>
-
-  <a href="mailto:textxto@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-C6A43F?style=for-the-badge&logo=gmail&logoColor=0A1A2F&color=C6A43F" alt="Gmail">
-  </a>
-</p>
-
 ---
 
 ## Sobre o ALM
