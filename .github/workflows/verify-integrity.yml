@@ -1,0 +1,51 @@
+﻿name: "Verificar Integridade do Tema"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Instalar jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+      
+      - name: Calcular hashes
+        run: |
+          mkdir -p .integrity
+          find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.svg" \) \
+            ! -path "./.git/*" ! -path "./.github/*" ! -path "./.integrity/*" \
+            -exec sha256sum {} \; > .integrity/current.tmp
+          
+          echo '{' > .integrity/current.json
+          first=true
+          while IFS='  ' read hash file; do
+            file=$(echo $file | sed 's|^\./||')
+            if [ "$first" = true ]; then first=false; else echo ',' >> .integrity/current.json; fi
+            echo "  \"$file\": \"$hash\"" >> .integrity/current.json
+          done < .integrity/current.tmp
+          echo '}' >> .integrity/current.json
+      
+      - name: Verificar integridade
+        run: |
+          if [ ! -f ".integrity/hashes.json" ]; then
+            cp .integrity/current.json .integrity/hashes.json
+            git config user.name "Security Bot"
+            git add .integrity/hashes.json
+            git commit -m "Initial security hashes" || true
+            git push
+            exit 0
+          fi
+          
+          if ! diff -q .integrity/current.json .integrity/hashes.json > /dev/null; then
+            echo "::error::INTEGRIDADE COMPROMETIDA"
+            exit 1
+          fi
