@@ -13,6 +13,10 @@
   <a href="https://github.com/textxto/alm"><img src="https://img.shields.io/badge/Repositório-C6A43F?style=for-the-badge&logo=github&logoColor=0A1A2F&color=C6A43F" alt="Repositório"></a>
 </p>
 
+<a href="mailto:textxto@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-0A1A2F?style=for-the-badge&logo=gmail&logoColor=white&color=0A1A2F" alt="Gmail">
+</a>
+
 <!-- Botões Sociais -->
 <p align="center">
   <a href="https://instagram.com/textxto"><img src="https://img.shields.io/badge/Instagram-0A1A2F?style=for-the-badge&logo=instagram&logoColor=white&color=0A1A2F" alt="Instagram"></a>
