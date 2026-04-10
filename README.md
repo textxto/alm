@@ -9,11 +9,13 @@
 <!-- Botões Principais -->
 <p align="center">
   <a href="https://textxto.github.io/alm/">
-    <img src="https://img.shields.io/badge/Tema%20Oficial-0A1A2F?style=for-the-badge&logo=githubpages&logoColor=white&color=0A1A2F" alt="Tema Oficial">
+    <img src="https://img.shields.io/badge/Tema%20Oficial-C6A43F?style=for-the-badge&logo=githubpages&logoColor=0A1A2F&color=C6A43F" alt="Tema Oficial">
   </a>
+
   <a href="docs/">
-    <img src="https://img.shields.io/badge/Documentação-2C2C36?style=for-the-badge&logo=readthedocs&logoColor=white&color=2C2C36" alt="Documentação">
+    <img src="https://img.shields.io/badge/Documentação-C6A43F?style=for-the-badge&logo=readthedocs&logoColor=0A1A2F&color=C6A43F" alt="Documentação">
   </a>
+
   <a href="https://github.com/textxto/alm">
     <img src="https://img.shields.io/badge/Repositório-C6A43F?style=for-the-badge&logo=github&logoColor=0A1A2F&color=C6A43F" alt="Repositório">
   </a>
@@ -22,11 +24,13 @@
 <!-- Botões Sociais -->
 <p align="center">
   <a href="https://instagram.com/textxto">
-    <img src="https://img.shields.io/badge/Instagram-0A1A2F?style=for-the-badge&logo=instagram&logoColor=white&color=0A1A2F" alt="Instagram">
+    <img src="https://img.shields.io/badge/Instagram-C6A43F?style=for-the-badge&logo=instagram&logoColor=0A1A2F&color=C6A43F" alt="Instagram">
   </a>
+
   <a href="https://www.linkedin.com/in/textxto">
-    <img src="https://img.shields.io/badge/LinkedIn-2C2C36?style=for-the-badge&logo=linkedin&logoColor=white&color=2C2C36" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-C6A43F?style=for-the-badge&logo=linkedin&logoColor=0A1A2F&color=C6A43F" alt="LinkedIn">
   </a>
+
   <a href="mailto:textxto@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-C6A43F?style=for-the-badge&logo=gmail&logoColor=0A1A2F&color=C6A43F" alt="Gmail">
   </a>
