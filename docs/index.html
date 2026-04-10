@@ -203,7 +203,6 @@
         }
 
         .slide-dots {
-            display: none !important;
             position: fixed;
             bottom: clamp(0.8rem, 2vh, 1.2rem);
             left: 50%;
@@ -1467,6 +1466,127 @@
             outline: 2px solid var(--accent-secondary);
             outline-offset: 2px;
         }
+
+        /* ============================================ */
+        /* FOOTER CONDICIONAL - ALM LUXURY              */
+        /* ============================================ */
+
+        .alm-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border-light);
+            padding: 1rem clamp(1rem, 4vw, 2rem);
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            z-index: 998;
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            pointer-events: none;
+        }
+
+        .alm-footer.visible {
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .alm-footer a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .alm-footer a:hover {
+            color: var(--accent-primary);
+            text-decoration: underline;
+        }
+
+        .alm-footer .footer-links {
+            margin-bottom: 0.5rem;
+        }
+
+        .alm-footer .footer-copyright {
+            font-size: 0.65rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .alm-footer {
+                padding: 0.8rem 1rem;
+            }
+            .alm-footer .footer-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+                margin-bottom: 0.4rem;
+            }
+            .alm-footer a {
+                margin: 0;
+            }
+        }
+
+        /* ============================================ */
+        /* BOTÃO FOCUS - REPOSICIONADO NO MOBILE        */
+        /* ============================================ */
+
+        @media (max-width: 768px) {
+            .focus-toggle-btn {
+                bottom: auto;
+                top: 1rem;
+                right: 1rem;
+                left: auto;
+                z-index: 1003;
+                background: var(--menu-bg);
+                backdrop-filter: blur(16px);
+                padding: 0.5rem 1rem;
+                font-size: 0.65rem;
+                border-radius: 30px;
+                box-shadow: var(--shadow-sm);
+            }
+            
+            body.focus-mode .focus-toggle-btn {
+                opacity: 0.6;
+                pointer-events: auto;
+            }
+        }
+
+        /* ============================================ */
+        /* BARRA LATERAL DIREITA - MOBILE MELHORADA     */
+        /* ============================================ */
+
+        @media (max-width: 768px) {
+            .right-actions-nav {
+                right: clamp(1rem, 4vw, 1.5rem);
+                padding: 0.8rem 0.5rem;
+                gap: 0.8rem;
+                background: var(--menu-bg);
+                backdrop-filter: blur(20px);
+                border-radius: 50px;
+            }
+            
+            .right-actions-nav button {
+                width: 3rem;
+                height: 3rem;
+                min-width: 44px;
+                min-height: 44px;
+            }
+            
+            .right-actions-nav button svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            
+            .right-actions-nav button::before {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1537,7 +1657,7 @@
 
 <div class="slide-dots" id="slideDots" aria-label="Indicadores de slide"></div>
 
-<button class="focus-toggle-btn" id="focusToggleBtn" aria-label="Alternar modo foco">🎯 Modo Focus</button>
+<button class="focus-toggle-btn" id="focusToggleBtn" aria-label="Alternar modo foco">Modo Focus</button>
 
 <main class="horizontal-scroll" id="horizontalScroll">
     
@@ -2331,12 +2451,21 @@
     });
     
     // ============================================ //
-    // FOCUS MODE                                   //
+    // FOCUS MODE (COM SVGS EM VEZ DE EMOJIS)       //
     // ============================================ //
     if (focusToggle) {
+        const svgFocus = '<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+        const svgFocusOff = '<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="3" x2="21" y2="21"/></svg>';
+        
+        focusToggle.innerHTML = svgFocus + ' Modo Focus';
+        
         focusToggle.addEventListener('click', () => {
             document.body.classList.toggle('focus-mode');
-            focusToggle.textContent = document.body.classList.contains('focus-mode') ? '✨ Sair Focus' : '🎯 Modo Focus';
+            if (document.body.classList.contains('focus-mode')) {
+                focusToggle.innerHTML = svgFocusOff + ' Sair Focus';
+            } else {
+                focusToggle.innerHTML = svgFocus + ' Modo Focus';
+            }
         });
     }
     
@@ -2557,6 +2686,76 @@
     updateProgress();
     goToSlide(0);
 })();
+
+// ============================================ //
+// FOOTER CONDICIONAL (visível apenas no último slide)
+// ============================================ //
+function initFooter() {
+    if (!document.querySelector('.alm-footer')) {
+        const footer = document.createElement('footer');
+        footer.className = 'alm-footer';
+        footer.innerHTML = `
+            <div class="footer-links">
+                <a href="https://textxto.github.io/alm/">Tema Oficial</a>
+                <a href="https://github.com/textxto/alm">Repositório</a>
+                <a href="docs/">Documentação</a>
+                <a href="https://instagram.com/textxto">Instagram</a>
+                <a href="https://www.linkedin.com/in/textxto">LinkedIn</a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 Laboratório de Palavras — Ideias em Texto | Alma · limpa · profissional · forte
+            </div>
+        `;
+        document.body.appendChild(footer);
+    }
+    
+    const footer = document.querySelector('.alm-footer');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    
+    function updateFooterVisibility() {
+        if (!footer) return;
+        if (currentIndex === totalSlides - 1) {
+            footer.classList.add('visible');
+        } else {
+            footer.classList.remove('visible');
+        }
+    }
+    
+    const originalGoToSlide = window.goToSlide || function() {};
+    window.goToSlide = function(index) {
+        if (typeof originalGoToSlide === 'function') originalGoToSlide(index);
+        updateFooterVisibility();
+    };
+    
+    if (scrollContainer) {
+        scrollContainer.addEventListener('scroll', () => {
+            setTimeout(updateFooterVisibility, 100);
+        });
+    }
+    
+    updateFooterVisibility();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooter);
+} else {
+    initFooter();
+}
+
+// ============================================ //
+// GARANTIR QUE O BOTÃO FOCUS NÃO SOBREPÕE A BARRA DIREITA
+// ============================================ //
+function adjustFocusButtonZIndex() {
+    const focusBtn = document.getElementById('focusToggleBtn');
+    if (window.innerWidth <= 768 && focusBtn) {
+        focusBtn.style.zIndex = '1003';
+    } else if (focusBtn) {
+        focusBtn.style.zIndex = '1002';
+    }
+}
+
+window.addEventListener('resize', adjustFocusButtonZIndex);
+adjustFocusButtonZIndex();
 </script>
 </body>
 </html>
