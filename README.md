@@ -46,7 +46,7 @@ O **ALM – Luxury Design System** é a identidade visual e estrutural do Labora
 
 ---
 
-## Outros Componentes 
+## Componentes 
 
 - **UIkit 3.21.13** – Framework CSS para componentes base
 - **Google Fonts** – Inter (corpo) e Cormorant Garamond (títulos)
