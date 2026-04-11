@@ -38,7 +38,7 @@
 
 ---
 
-## Sobre o ALM
+## Acerca de: ALM - LUXURY DESIGN SYSTEM - LABORATÓRIO DE PALAVRAS EDITION
 
 O **ALM – Luxury Design System** é a identidade visual e estrutural do Laboratório de Palavras. Um ecossistema editorial digital desenhado para transmitir elegância silenciosa, rigor técnico e clareza absoluta.
 
@@ -46,7 +46,7 @@ O **ALM – Luxury Design System** é a identidade visual e estrutural do Labora
 
 ---
 
-## Outros Componentes 
+## Componentes 
 
 - **UIkit 3.21.13** – Framework CSS para componentes base
 - **Google Fonts** – Inter (corpo) e Cormorant Garamond (títulos)
